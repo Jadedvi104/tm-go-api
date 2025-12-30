@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"strings"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -67,7 +68,7 @@ func main() {
 		}
 
 		// Validate user name
-		if user.Name == "" {
+		if strings.TrimSpace(user.Name) == "" {
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
 				"error": "Name is required",
 			})
