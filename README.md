@@ -12,7 +12,7 @@ A RESTful API built with Go and the Fiber framework.
 
 ## Prerequisites
 
-- Go 1.20 or higher
+- Go 1.21 or higher
 
 ## Installation
 

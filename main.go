@@ -66,6 +66,13 @@ func main() {
 			})
 		}
 
+		// Validate user name
+		if user.Name == "" {
+			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
+				"error": "Name is required",
+			})
+		}
+
 		return c.Status(fiber.StatusCreated).JSON(fiber.Map{
 			"message": "User created successfully",
 			"user": fiber.Map{

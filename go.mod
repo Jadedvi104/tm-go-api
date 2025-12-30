@@ -1,6 +1,6 @@
 module github.com/Jadedvi104/tm-go-api
 
-go 1.24.11
+go 1.21
 
 require github.com/gofiber/fiber/v2 v2.52.10
 
