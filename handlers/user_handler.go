@@ -21,6 +21,9 @@ func CreateUser(c *fiber.Ctx) error {
 		return c.Status(500).JSON(fiber.Map{"error": "Could not create user"})
 	}
 
+	// SECURITY: Clear the password before returning the data to the user
+	user.PasswordHash = ""
+
 	return c.Status(201).JSON(user)
 }
 
