@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"my-fiber-app/database"
-	"my-fiber-app/models"
+	"tm-go-api/database"
+	"tm-go-api/models"
 
 	"github.com/gofiber/fiber/v2"
 )

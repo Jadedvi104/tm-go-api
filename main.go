@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
-	"my-fiber-app/database"
-	"my-fiber-app/routes"
+	"tm-go-api/database"
+	"tm-go-api/routes"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"

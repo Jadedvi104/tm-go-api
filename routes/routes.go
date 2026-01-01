@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"my-fiber-app/handlers"
+	"tm-go-api/handlers"
 
 	"github.com/gofiber/fiber/v2"
 )
