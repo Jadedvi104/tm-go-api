@@ -1,0 +1,12 @@
+# Ignore git history (can be huge)
+.git
+.gitignore
+
+# Ignore local binaries/builds
+bin/
+dist/
+main
+main.exe
+
+# Ignore environment files (Security!)
+.env
