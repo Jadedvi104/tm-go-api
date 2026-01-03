@@ -13,7 +13,7 @@ import (
 func main() {
 	// Load .env
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file")
+		log.Println("No .env file found, relying on System Environment Variables")
 	}
 
 	// Connect to DB
@@ -24,9 +24,14 @@ func main() {
 	// Middleware
 	app.Use(logger.New())
 
+	// Health Check
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("I am alive!") // Azure loves 200 OK responses
+	})
+
 	// Setup Routes
 	routes.SetupRoutes(app)
 
 	// Start server
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(":80"))
 }
